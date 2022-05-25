@@ -5,6 +5,7 @@ from PyQt5.QtGui import QPainter, QPainterPath, QBrush, QPen, QColor, QTransform
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
 
+from SurRender.tool import *
 from SurRender.io.obj_writer import OBJWriter
 from SurRender.utils import adjacents
 from SurRender.view import View
@@ -20,6 +21,7 @@ class Viewport(QWidget):
     def __init__(self):
         super().__init__()
         self.scene = Scene()
+        self.tool = MoveTool(self)
 
     def zoom_in(self, factor):
         self.win.zoom(1/factor)

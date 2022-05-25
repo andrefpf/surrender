@@ -10,7 +10,7 @@ from SurRender.menus.modify_object import ModifyObject
 from SurRender.menus.modify_view import ModifyView
 from SurRender.constants import WINDOW_HEIGHT, WINDOW_WIDTH, APPLICATION_NAME
 from SurRender.viewport_widget import ViewportWidget
-
+from SurRender.tool import Tool
 
 class MainWindow(QMainWindow):
     """Main Window."""
@@ -18,6 +18,8 @@ class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         """Initializer."""
         super().__init__(parent)
+
+
         self.init_ui()
         self.__createActions()
         self.__createMenuBar()
